@@ -1,6 +1,6 @@
 //
 //  CGFloat+Ext.swift
-//  FrogJump
+//  TribeLeap
 //
 //  Created by Natasha Radika on 26/04/24.
 //

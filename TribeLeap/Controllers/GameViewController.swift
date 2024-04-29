@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  FrogJump
+//  TribeLeap
 //
 //  Created by Natasha Radika on 25/04/24.
 //

@@ -1,12 +1,12 @@
 //
-//  FrogJumpTests.swift
-//  FrogJumpTests
+//  TribeLeapTests.swift
+//  TribeLeapTests
 //
 //  Created by Natasha Radika on 25/04/24.
 //
 
 import XCTest
-@testable import FrogJump
+@testable import TribeLeap
 
 final class TribeLeapTests: XCTestCase {
 

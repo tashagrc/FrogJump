@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  FrogJump
+//  TribeLeap
 //
 //  Created by Natasha Radika on 25/04/24.
 //
@@ -58,7 +58,10 @@ class GameScene: SKScene {
     var soundJump = SKAction.playSoundFileNamed("jump.wav")
     var soundCollision = SKAction.playSoundFileNamed("collision.wav")
 
-
+    // control jump or squat
+    var jumpArrow: SKSpriteNode!
+    var squatArrow: SKSpriteNode!
+    var originalPlayerHeight: CGFloat!
     
     
     // rasio
@@ -124,7 +127,14 @@ class GameScene: SKScene {
             scene.scaleMode = scaleMode
             view!.presentScene(scene, transition: .doorsCloseVertical(withDuration: 0.8))
         }
-        else {
+        else if node.name == "squatArrow" {
+            if !isPaused {
+                let squatHeight = originalPlayerHeight * 0.5
+                player.size = CGSize(width: player.size.width, height: squatHeight)
+                
+            }
+        }
+        else if node.name == "jumpArrow" {
             // kalo touch ga berhenti, naikin playernya 25pt
             if !isPaused {
                 if onGround {
@@ -139,6 +149,7 @@ class GameScene: SKScene {
     // memastikan tingginya jump konsisten seberapa lama jump dipencet
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        player.size.height = originalPlayerHeight
     }
     
     // update per frame

@@ -25,9 +25,9 @@
 		A38CECF72BDA3D2E002C7B25 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */; };
 		A38CECFA2BDA3D2E002C7B25 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF92BDA3D2E002C7B25 /* Base */; };
 		A38CECFF2BDA3D2F002C7B25 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A38CECFE2BDA3D2F002C7B25 /* Base */; };
-		A38CED092BDA3D2F002C7B25 /* FrogJumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED082BDA3D2F002C7B25 /* FrogJumpTests.swift */; };
-		A38CED132BDA3D2F002C7B25 /* FrogJumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED122BDA3D2F002C7B25 /* FrogJumpUITests.swift */; };
-		A38CED152BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */; };
+		A38CED092BDA3D2F002C7B25 /* TribeLeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED082BDA3D2F002C7B25 /* TribeLeapTests.swift */; };
+		A38CED132BDA3D2F002C7B25 /* TribeLeapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED122BDA3D2F002C7B25 /* TribeLeapUITests.swift */; };
+		A38CED152BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED142BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift */; };
 		A38CED452BDA3DFC002C7B25 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */; };
 		A38CED462BDA3DFC002C7B25 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED222BDA3DFC002C7B25 /* coin.mp3 */; };
 		A38CED472BDA3DFC002C7B25 /* collision.wav in Resources */ = {isa = PBXBuildFile; fileRef = A38CED232BDA3DFC002C7B25 /* collision.wav */; };
@@ -66,7 +66,7 @@
 		A31520762BDEA5380042EF8F /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Ext.swift"; sourceTree = "<group>"; };
 		A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/FrogJump-main/FrogJump/Assets.xcassets"; sourceTree = "<group>"; };
-		A38CECEB2BDA3D2E002C7B25 /* FrogJump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogJump.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38CECEB2BDA3D2E002C7B25 /* TribeLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TribeLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A38CECF02BDA3D2E002C7B25 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A38CECF22BDA3D2E002C7B25 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -74,11 +74,11 @@
 		A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A38CECF92BDA3D2E002C7B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A38CECFE2BDA3D2F002C7B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A38CED042BDA3D2F002C7B25 /* FrogJumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrogJumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A38CED082BDA3D2F002C7B25 /* FrogJumpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpTests.swift; sourceTree = "<group>"; };
-		A38CED0E2BDA3D2F002C7B25 /* FrogJumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrogJumpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A38CED122BDA3D2F002C7B25 /* FrogJumpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpUITests.swift; sourceTree = "<group>"; };
-		A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A38CED042BDA3D2F002C7B25 /* TribeLeapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TribeLeapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38CED082BDA3D2F002C7B25 /* TribeLeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TribeLeapTests.swift; sourceTree = "<group>"; };
+		A38CED0E2BDA3D2F002C7B25 /* TribeLeapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TribeLeapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38CED122BDA3D2F002C7B25 /* TribeLeapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TribeLeapUITests.swift; sourceTree = "<group>"; };
+		A38CED142BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TribeLeapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		A38CED222BDA3DFC002C7B25 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
 		A38CED232BDA3DFC002C7B25 /* collision.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collision.wav; sourceTree = "<group>"; };
@@ -125,9 +125,9 @@
 		A38CECE22BDA3D2E002C7B25 = {
 			isa = PBXGroup;
 			children = (
-				A38CECED2BDA3D2E002C7B25 /* FrogJump */,
-				A38CED072BDA3D2F002C7B25 /* FrogJumpTests */,
-				A38CED112BDA3D2F002C7B25 /* FrogJumpUITests */,
+				A38CECED2BDA3D2E002C7B25 /* TribeLeap */,
+				A38CED072BDA3D2F002C7B25 /* TribeLeapTests */,
+				A38CED112BDA3D2F002C7B25 /* TribeLeapUITests */,
 				A38CECEC2BDA3D2E002C7B25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,14 +135,14 @@
 		A38CECEC2BDA3D2E002C7B25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A38CECEB2BDA3D2E002C7B25 /* FrogJump.app */,
-				A38CED042BDA3D2F002C7B25 /* FrogJumpTests.xctest */,
-				A38CED0E2BDA3D2F002C7B25 /* FrogJumpUITests.xctest */,
+				A38CECEB2BDA3D2E002C7B25 /* TribeLeap.app */,
+				A38CED042BDA3D2F002C7B25 /* TribeLeapTests.xctest */,
+				A38CED0E2BDA3D2F002C7B25 /* TribeLeapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A38CECED2BDA3D2E002C7B25 /* FrogJump */ = {
+		A38CECED2BDA3D2E002C7B25 /* TribeLeap */ = {
 			isa = PBXGroup;
 			children = (
 				A31520652BDE11D10042EF8F /* Types */,
@@ -158,24 +158,24 @@
 				A38CECFD2BDA3D2F002C7B25 /* LaunchScreen.storyboard */,
 				A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */,
 			);
-			path = FrogJump;
+			path = TribeLeap;
 			sourceTree = "<group>";
 		};
-		A38CED072BDA3D2F002C7B25 /* FrogJumpTests */ = {
+		A38CED072BDA3D2F002C7B25 /* TribeLeapTests */ = {
 			isa = PBXGroup;
 			children = (
-				A38CED082BDA3D2F002C7B25 /* FrogJumpTests.swift */,
+				A38CED082BDA3D2F002C7B25 /* TribeLeapTests.swift */,
 			);
-			path = FrogJumpTests;
+			path = TribeLeapTests;
 			sourceTree = "<group>";
 		};
-		A38CED112BDA3D2F002C7B25 /* FrogJumpUITests */ = {
+		A38CED112BDA3D2F002C7B25 /* TribeLeapUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A38CED122BDA3D2F002C7B25 /* FrogJumpUITests.swift */,
-				A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */,
+				A38CED122BDA3D2F002C7B25 /* TribeLeapUITests.swift */,
+				A38CED142BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift */,
 			);
-			path = FrogJumpUITests;
+			path = TribeLeapUITests;
 			sourceTree = "<group>";
 		};
 		A38CED252BDA3DFC002C7B25 /* Sound */ = {
@@ -233,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A38CECEA2BDA3D2E002C7B25 /* FrogJump */ = {
+		A38CECEA2BDA3D2E002C7B25 /* TribeLeap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A38CED182BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJump" */;
+			buildConfigurationList = A38CED182BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeap" */;
 			buildPhases = (
 				A38CECE72BDA3D2E002C7B25 /* Sources */,
 				A38CECE82BDA3D2E002C7B25 /* Frameworks */,
@@ -245,14 +245,14 @@
 			);
 			dependencies = (
 			);
-			name = FrogJump;
+			name = TribeLeap;
 			productName = FrogJump;
-			productReference = A38CECEB2BDA3D2E002C7B25 /* FrogJump.app */;
+			productReference = A38CECEB2BDA3D2E002C7B25 /* TribeLeap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A38CED032BDA3D2F002C7B25 /* FrogJumpTests */ = {
+		A38CED032BDA3D2F002C7B25 /* TribeLeapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A38CED1B2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJumpTests" */;
+			buildConfigurationList = A38CED1B2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeapTests" */;
 			buildPhases = (
 				A38CED002BDA3D2F002C7B25 /* Sources */,
 				A38CED012BDA3D2F002C7B25 /* Frameworks */,
@@ -263,14 +263,14 @@
 			dependencies = (
 				A38CED062BDA3D2F002C7B25 /* PBXTargetDependency */,
 			);
-			name = FrogJumpTests;
+			name = TribeLeapTests;
 			productName = FrogJumpTests;
-			productReference = A38CED042BDA3D2F002C7B25 /* FrogJumpTests.xctest */;
+			productReference = A38CED042BDA3D2F002C7B25 /* TribeLeapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A38CED0D2BDA3D2F002C7B25 /* FrogJumpUITests */ = {
+		A38CED0D2BDA3D2F002C7B25 /* TribeLeapUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A38CED1E2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJumpUITests" */;
+			buildConfigurationList = A38CED1E2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeapUITests" */;
 			buildPhases = (
 				A38CED0A2BDA3D2F002C7B25 /* Sources */,
 				A38CED0B2BDA3D2F002C7B25 /* Frameworks */,
@@ -281,9 +281,9 @@
 			dependencies = (
 				A38CED102BDA3D2F002C7B25 /* PBXTargetDependency */,
 			);
-			name = FrogJumpUITests;
+			name = TribeLeapUITests;
 			productName = FrogJumpUITests;
-			productReference = A38CED0E2BDA3D2F002C7B25 /* FrogJumpUITests.xctest */;
+			productReference = A38CED0E2BDA3D2F002C7B25 /* TribeLeapUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A38CECE62BDA3D2E002C7B25 /* Build configuration list for PBXProject "FrogJump" */;
+			buildConfigurationList = A38CECE62BDA3D2E002C7B25 /* Build configuration list for PBXProject "TribeLeap" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -322,9 +322,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A38CECEA2BDA3D2E002C7B25 /* FrogJump */,
-				A38CED032BDA3D2F002C7B25 /* FrogJumpTests */,
-				A38CED0D2BDA3D2F002C7B25 /* FrogJumpUITests */,
+				A38CECEA2BDA3D2E002C7B25 /* TribeLeap */,
+				A38CED032BDA3D2F002C7B25 /* TribeLeapTests */,
+				A38CED0D2BDA3D2F002C7B25 /* TribeLeapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,7 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38CED092BDA3D2F002C7B25 /* FrogJumpTests.swift in Sources */,
+				A38CED092BDA3D2F002C7B25 /* TribeLeapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,8 +398,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38CED152BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift in Sources */,
-				A38CED132BDA3D2F002C7B25 /* FrogJumpUITests.swift in Sources */,
+				A38CED152BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift in Sources */,
+				A38CED132BDA3D2F002C7B25 /* TribeLeapUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +408,12 @@
 /* Begin PBXTargetDependency section */
 		A38CED062BDA3D2F002C7B25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A38CECEA2BDA3D2E002C7B25 /* FrogJump */;
+			target = A38CECEA2BDA3D2E002C7B25 /* TribeLeap */;
 			targetProxy = A38CED052BDA3D2F002C7B25 /* PBXContainerItemProxy */;
 		};
 		A38CED102BDA3D2F002C7B25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A38CECEA2BDA3D2E002C7B25 /* FrogJump */;
+			target = A38CECEA2BDA3D2E002C7B25 /* TribeLeap */;
 			targetProxy = A38CED0F2BDA3D2F002C7B25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -629,7 +629,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrogJump.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FrogJump";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TribeLeap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TribeLeap";
 			};
 			name = Debug;
 		};
@@ -649,7 +649,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrogJump.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FrogJump";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TribeLeap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TribeLeap";
 			};
 			name = Release;
 		};
@@ -692,7 +692,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A38CECE62BDA3D2E002C7B25 /* Build configuration list for PBXProject "FrogJump" */ = {
+		A38CECE62BDA3D2E002C7B25 /* Build configuration list for PBXProject "TribeLeap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A38CED162BDA3D2F002C7B25 /* Debug */,
@@ -701,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A38CED182BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJump" */ = {
+		A38CED182BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A38CED192BDA3D2F002C7B25 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A38CED1B2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJumpTests" */ = {
+		A38CED1B2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A38CED1C2BDA3D2F002C7B25 /* Debug */,
@@ -719,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A38CED1E2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "FrogJumpUITests" */ = {
+		A38CED1E2BDA3D2F002C7B25 /* Build configuration list for PBXNativeTarget "TribeLeapUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A38CED1F2BDA3D2F002C7B25 /* Debug */,

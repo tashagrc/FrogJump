@@ -1,6 +1,6 @@
 //
 //  GameSceneExt.swift
-//  FrogJump
+//  TribeLeap
 //
 //  Created by Natasha Radika on 28/04/24.
 //
@@ -23,6 +23,7 @@ extension GameScene {
         setupLife()
         setupScore()
         setupPause()
+        setupControl()
         setupCamera()
     }
     
@@ -90,6 +91,8 @@ extension GameScene {
         
         // get position of player for jumping
         playerPosY = player.position.y
+        
+        originalPlayerHeight = player.size.height
         
         // kasih animasi
         var texturesRun: [SKTexture] = []
@@ -360,6 +363,24 @@ extension GameScene {
         quit.position = CGPoint(x: panel.frame.width/2.0 - quit.frame.width*1.5, y: 0.0)
         panel.addChild(quit)
         
+    }
+    
+    // tambahin control buat jump and squat
+    func setupControl() {
+        
+        jumpArrow = SKSpriteNode(imageNamed: "arrowUp")
+        squatArrow = SKSpriteNode(imageNamed: "arrowDown")
+        jumpArrow.name = "jumpArrow"
+        squatArrow.name = "squatArrow"
+        
+        jumpArrow.zPosition = 50.0
+        squatArrow.zPosition = 50.0
+        
+        jumpArrow.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: -playableRect.height/2.0 + pauseNode.frame.height/2.0 + 100.0)
+        squatArrow.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: jumpArrow.position.y - jumpArrow.frame.height - 20.0)
+        
+        cameraNode.addChild(jumpArrow)
+        cameraNode.addChild(squatArrow)
     }
     
     // cek kalo player udh keluar dari layar

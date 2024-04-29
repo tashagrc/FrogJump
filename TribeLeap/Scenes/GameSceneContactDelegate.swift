@@ -1,6 +1,6 @@
 //
 //  GameSceneContactDelegate.swift
-//  FrogJump
+//  TribeLeap
 //
 //  Created by Natasha Radika on 28/04/24.
 //
@@ -18,13 +18,6 @@ extension GameScene: SKPhysicsContactDelegate {
         case PhysicsCategory.Block:
             // kalo nabrak block maka kamera akan ninggalin player
             cameraMovePointPerSecond += 100.0
-            numScore -= 1
-            if numScore <= 0 {
-                numScore = 0
-                
-            }
-            scoreLbl.text = "\(numScore)"
-            
             run(soundCollision)
             
         case PhysicsCategory.Obstacle:
