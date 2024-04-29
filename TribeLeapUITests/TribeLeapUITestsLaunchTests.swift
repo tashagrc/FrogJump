@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class FrogJumpUITestsLaunchTests: XCTestCase {
+final class TribeLeapUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

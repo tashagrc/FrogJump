@@ -1,13 +1,13 @@
 //
-//  FrogJumpUITests.swift
-//  FrogJumpUITests
+//  TribeLeapUITests.swift
+//  TribeLeapUITests
 //
 //  Created by Natasha Radika on 25/04/24.
 //
 
 import XCTest
 
-final class FrogJumpUITests: XCTestCase {
+final class TribeLeapUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

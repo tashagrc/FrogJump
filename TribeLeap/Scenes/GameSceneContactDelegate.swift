@@ -17,7 +17,7 @@ extension GameScene: SKPhysicsContactDelegate {
         switch other.categoryBitMask {
         case PhysicsCategory.Block:
             // kalo nabrak block maka kamera akan ninggalin player
-            cameraMovePointPerSecond += 150.0
+            cameraMovePointPerSecond += 100.0
             numScore -= 1
             if numScore <= 0 {
                 numScore = 0
@@ -40,7 +40,7 @@ extension GameScene: SKPhysicsContactDelegate {
                 scoreLbl.text = "\(numScore)"
                 // setiap kelipatan 5 bakal nambah kecepatan
                 if numScore % 5 == 0 {
-                    cameraMovePointPerSecond += 100.0
+                    cameraMovePointPerSecond += 50.0
                 }
                 
                 // set highscrore

@@ -139,9 +139,6 @@ class GameScene: SKScene {
     // memastikan tingginya jump konsisten seberapa lama jump dipencet
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        if velocityY < -12.5 {
-            velocityY = -12.5
-        }
     }
     
     // update per frame

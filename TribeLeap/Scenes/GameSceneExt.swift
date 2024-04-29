@@ -96,6 +96,7 @@ extension GameScene {
         for i in 0...4 {
             texturesRun.append(SKTexture(imageNamed: "person-\(i)"))
         }
+        
         // repeat animation forever
         player.run(.repeatForever(.animate(with: texturesRun, timePerFrame: 0.083)))
         
@@ -214,7 +215,8 @@ extension GameScene {
     
     // ini obstacle selain block
     func spawnObstacles() {
-        let random = Double(CGFloat.random(min: 1.5, max: isTime))
+        
+        let random = Double(CGFloat.random(min: 2, max: isTime))
         run(.repeatForever(.sequence([
             .wait(forDuration: random),
             .run { [weak self] in
@@ -227,8 +229,8 @@ extension GameScene {
             .run {
                 self.isTime -= 0.01
                 
-                if self.isTime <= 1.5 {
-                    self.isTime = 1.5
+                if self.isTime <= 2 {
+                    self.isTime = 2
                 }
             }])))
     }
