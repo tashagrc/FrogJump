@@ -72,7 +72,7 @@ extension GameScene {
     
     func createPlayer() {
         // ganti ini kalo mau ganti playernya
-        player = SKSpriteNode(imageNamed: "ninja")
+        player = SKSpriteNode(imageNamed: "person-1")
         player.name = "Player"
         player.zPosition = 5.0
         player.setScale(0.85)
@@ -80,15 +80,25 @@ extension GameScene {
         player.position = CGPoint(x: frame.width/2.0 - 100.0, y: ground.frame.height + player.frame.height/2.0)
         
         // player physics
-        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2.0)
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
         player.physicsBody!.affectedByGravity = false
         player.physicsBody!.restitution = 0.0 // bounciness, ini berarti ga bounce
         player.physicsBody!.categoryBitMask = PhysicsCategory.Player
         player.physicsBody!.contactTestBitMask = PhysicsCategory.Block | PhysicsCategory.Obstacle | PhysicsCategory.Coin
+        player.physicsBody!.allowsRotation = false
     
         
         // get position of player for jumping
         playerPosY = player.position.y
+        
+        // kasih animasi
+        var texturesRun: [SKTexture] = []
+        for i in 0...4 {
+            texturesRun.append(SKTexture(imageNamed: "person-\(i)"))
+        }
+        // repeat animation forever
+        player.run(.repeatForever(.animate(with: texturesRun, timePerFrame: 0.083)))
+        
         
         addChild(player)
     }
@@ -131,10 +141,6 @@ extension GameScene {
     
     func movePlayer() {
         let amountToMove = cameraMovePointPerSecond * CGFloat(dt)
-        // hapus
-        let rotate = CGFloat(1).degreesToRadians() * amountToMove/2.5
-        
-        player.zRotation -= rotate
         player.position.x += amountToMove
     }
     
@@ -153,6 +159,7 @@ extension GameScene {
         spriteFire.name = "Obstacle"
         obstacles.append(spriteFire)
         
+        // kasih animasi
         var texturesFire: [SKTexture] = []
         for i in 1...3 {
             texturesFire.append(SKTexture(imageNamed: "obstacle-2-\(i)"))
@@ -174,7 +181,7 @@ extension GameScene {
         
         // ini posisi obstacle yg melayang
         if sprite.name == "ObstacleFloat" {
-            sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0 + 200.0)
+            sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0 + 150.0)
         } // ini posisi obstacle yg di tanah
         else {
             sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0)
