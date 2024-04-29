@@ -8,81 +8,176 @@
 import SpriteKit
 import GameplayKit
 
+// perbedaan camera node dan camera rect
+// camera node adalah view point screen, diletakkan di tengah, maka central view point
+// camera rect adalah porsi dari camera node yang bisa dilihat oleh pemain
+
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    // properties
+    var ground: SKSpriteNode!
+    var player: SKSpriteNode!
+    
+    var obstacles:[SKSpriteNode] = []
+    
+    var coin: SKSpriteNode!
+    
+    // view point of game
+    var cameraNode = SKCameraNode()
+    var cameraMovePointPerSecond: CGFloat = 450.0
+    
+    // for animation per frame
+    var lastUpdateTime: TimeInterval = 0.0
+    var dt: TimeInterval = 0.0
+    
+    // make player faster the longer you play
+    var isTime: CGFloat = 3.0
+    
+    // make jump
+    var onGround = true
+    var velocityY: CGFloat = 0.0
+    var gravity: CGFloat = 0.6
+    var playerPosY: CGFloat = 0.0
+    
+    // score and life
+    var numScore: Int = 0
+    var gameOver = false
+    var life: Int = 3
+    
+    // bikin grafik coin n heart
+    var lifeNodes: [SKSpriteNode] = []
+    var scoreLbl = SKLabelNode(fontNamed: "Krungthep")
+    var coinIcon: SKSpriteNode!
+    
+    // pause feature
+    var pauseNode: SKSpriteNode!
+    var containerNode = SKNode()
+    
+    // sound
+    var soundCoin = SKAction.playSoundFileNamed("coin.mp3")
+    var soundJump = SKAction.playSoundFileNamed("jump.wav")
+    var soundCollision = SKAction.playSoundFileNamed("collision.wav")
+
+
+    
+    
+    // rasio
+    
+    // bagian layar yg gameplay bisa dimainkan
+    var playableRect: CGRect {
+        let ratio: CGFloat
+        switch UIScreen.main.nativeBounds.height {
+        case 2688, 1792, 2436:
+            ratio = 2.16
+        default:
+            ratio = 16/9
+        }
+        let playableHeight = size.width / ratio
+        let playableMargin = (size.height - playableHeight) /  2.0
+        return CGRect(x: 0.0, y: playableMargin, width: size.width, height: playableHeight)
+    }
+    // kamera nyorot ke mana aja di layar
+    var cameraRect: CGRect {
+        let width = playableRect.width
+        let height = playableRect.height
+        let x = cameraNode.position.x - size.width/2.0 + (size.width - width) / 2.0
+        let y = cameraNode.position.y - size.height/2.0 + (size.height - height) / 2.0
+        
+        return CGRect(x: x, y: y, width: width, height: height)
+    }
+    
+    
+    // system
     
     override func didMove(to view: SKView) {
-        
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        setupNodes()
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
+    // for jumping
+    // ketika naik
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        super.touchesBegan(touches, with: event)
+        
+        // hanya dijalankan kalo ada touch
+        guard let touch = touches.first else {
+            return
+        }
+        // tentukan lokasi touch
+        let node = atPoint(touch.location(in: self))
+        
+        // kalo klik menu pause resume dll
+        if node.name == "pause" {
+            if isPaused {
+                return
+            }
+            createPanel()
+            lastUpdateTime = 0.0
+            dt = 0.0
+            isPaused = true
+        }
+        else if node.name == "resume" {
+            containerNode.removeFromParent()
+            isPaused = false
+        }
+        else if node.name == "quit" {
+            let scene = MainMenu(size: size)
+            scene.scaleMode = scaleMode
+            view!.presentScene(scene, transition: .doorsCloseVertical(withDuration: 0.8))
+        }
+        else {
+            // kalo touch ga berhenti, naikin playernya 25pt
+            if !isPaused {
+                if onGround {
+                    onGround = false
+                    velocityY = -25.0
+                    run(soundJump)
+                }
+            }
+        }
+    
+    }
+    // memastikan tingginya jump konsisten seberapa lama jump dipencet
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        if velocityY < -12.5 {
+            velocityY = -12.5
+        }
+    }
+    
+    // update per frame
+    override func update(_ currentTime: TimeInterval) {
+        if lastUpdateTime > 0 {
+            dt = currentTime - lastUpdateTime
+        }
+        else {
+            dt = 0
+        }
+        lastUpdateTime = currentTime
+        print(dt)
+        moveCamera()
+        movePlayer()
+        
+        velocityY += gravity
+        player.position.y -= velocityY
+        
+        // ini pastikan kalo player ga turun ke bawah ground
+        if player.position.y < playerPosY {
+            player.position.y = playerPosY
+            velocityY = 0.0
+            onGround = true
         }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        // kalo gameover
+        if gameOver {
+            let scene = GameOver(size: size)
+            scene.scaleMode = scaleMode
+            view!.presentScene(scene, transition: .doorsCloseVertical(withDuration: 0.8))
+        }
+        
+        
+        boundCheckPlayer()
     }
 }
+
+
+

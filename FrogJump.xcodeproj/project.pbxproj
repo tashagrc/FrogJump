@@ -7,17 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31520672BDE11DD0042EF8F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520662BDE11DD0042EF8F /* Types.swift */; };
+		A31520692BDE1C510042EF8F /* GameSceneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520682BDE1C510042EF8F /* GameSceneExt.swift */; };
+		A315206B2BDE1CE00042EF8F /* GameSceneContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206A2BDE1CE00042EF8F /* GameSceneContactDelegate.swift */; };
+		A315206D2BDE4E000042EF8F /* ScoreGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */; };
+		A315206F2BDE523F0042EF8F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206E2BDE523F0042EF8F /* MainMenu.swift */; };
+		A31520712BDE56AC0042EF8F /* MainMenuExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520702BDE56AC0042EF8F /* MainMenuExt.swift */; };
+		A31520732BDE58CE0042EF8F /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520722BDE58CE0042EF8F /* GameOver.swift */; };
+		A31520752BDE9B5C0042EF8F /* GameOverExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520742BDE9B5C0042EF8F /* GameOverExt.swift */; };
+		A31520772BDEA5380042EF8F /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520762BDEA5380042EF8F /* SKTAudio.swift */; };
+		A315207B2BDEA8D50042EF8F /* SKAction+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */; };
+		A31D7BDD2BDF911300CEFED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */; };
 		A38CECEF2BDA3D2E002C7B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */; };
 		A38CECF12BDA3D2E002C7B25 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF02BDA3D2E002C7B25 /* GameScene.sks */; };
 		A38CECF32BDA3D2E002C7B25 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF22BDA3D2E002C7B25 /* Actions.sks */; };
 		A38CECF52BDA3D2E002C7B25 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CECF42BDA3D2E002C7B25 /* GameScene.swift */; };
 		A38CECF72BDA3D2E002C7B25 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */; };
 		A38CECFA2BDA3D2E002C7B25 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF92BDA3D2E002C7B25 /* Base */; };
-		A38CECFC2BDA3D2F002C7B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38CECFB2BDA3D2F002C7B25 /* Assets.xcassets */; };
 		A38CECFF2BDA3D2F002C7B25 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A38CECFE2BDA3D2F002C7B25 /* Base */; };
 		A38CED092BDA3D2F002C7B25 /* FrogJumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED082BDA3D2F002C7B25 /* FrogJumpTests.swift */; };
 		A38CED132BDA3D2F002C7B25 /* FrogJumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED122BDA3D2F002C7B25 /* FrogJumpUITests.swift */; };
 		A38CED152BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */; };
+		A38CED452BDA3DFC002C7B25 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */; };
+		A38CED462BDA3DFC002C7B25 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED222BDA3DFC002C7B25 /* coin.mp3 */; };
+		A38CED472BDA3DFC002C7B25 /* collision.wav in Resources */ = {isa = PBXBuildFile; fileRef = A38CED232BDA3DFC002C7B25 /* collision.wav */; };
+		A38CED482BDA3DFC002C7B25 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = A38CED242BDA3DFC002C7B25 /* jump.wav */; };
+		A38CED652BDA3DFC002C7B25 /* Krungthep.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38CED432BDA3DFC002C7B25 /* Krungthep.ttf */; };
+		A3B1159D2BDB6D0E004AB29B /* CGPoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1159C2BDB6D0E004AB29B /* CGPoint+Ext.swift */; };
+		A3B1159F2BDB789B004AB29B /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1159E2BDB789B004AB29B /* CGFloat+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A31520662BDE11DD0042EF8F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		A31520682BDE1C510042EF8F /* GameSceneExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneExt.swift; sourceTree = "<group>"; };
+		A315206A2BDE1CE00042EF8F /* GameSceneContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneContactDelegate.swift; sourceTree = "<group>"; };
+		A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGenerator.swift; sourceTree = "<group>"; };
+		A315206E2BDE523F0042EF8F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		A31520702BDE56AC0042EF8F /* MainMenuExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuExt.swift; sourceTree = "<group>"; };
+		A31520722BDE58CE0042EF8F /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		A31520742BDE9B5C0042EF8F /* GameOverExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverExt.swift; sourceTree = "<group>"; };
+		A31520762BDEA5380042EF8F /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Ext.swift"; sourceTree = "<group>"; };
+		A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/FrogJump-main/FrogJump/Assets.xcassets"; sourceTree = "<group>"; };
 		A38CECEB2BDA3D2E002C7B25 /* FrogJump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogJump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A38CECF02BDA3D2E002C7B25 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -45,13 +73,19 @@
 		A38CECF42BDA3D2E002C7B25 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A38CECF92BDA3D2E002C7B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A38CECFB2BDA3D2F002C7B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A38CECFE2BDA3D2F002C7B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A38CED042BDA3D2F002C7B25 /* FrogJumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrogJumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CED082BDA3D2F002C7B25 /* FrogJumpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpTests.swift; sourceTree = "<group>"; };
 		A38CED0E2BDA3D2F002C7B25 /* FrogJumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrogJumpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CED122BDA3D2F002C7B25 /* FrogJumpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpUITests.swift; sourceTree = "<group>"; };
 		A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogJumpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		A38CED222BDA3DFC002C7B25 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
+		A38CED232BDA3DFC002C7B25 /* collision.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collision.wav; sourceTree = "<group>"; };
+		A38CED242BDA3DFC002C7B25 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		A38CED432BDA3DFC002C7B25 /* Krungthep.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Krungthep.ttf; sourceTree = "<group>"; };
+		A3B1159C2BDB6D0E004AB29B /* CGPoint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Ext.swift"; sourceTree = "<group>"; };
+		A3B1159E2BDB789B004AB29B /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A31520652BDE11D10042EF8F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				A31520662BDE11DD0042EF8F /* Types.swift */,
+				A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		A38CECE22BDA3D2E002C7B25 = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +145,18 @@
 		A38CECED2BDA3D2E002C7B25 /* FrogJump */ = {
 			isa = PBXGroup;
 			children = (
+				A31520652BDE11D10042EF8F /* Types */,
+				A3B1159B2BDB6CF4004AB29B /* Utils */,
+				A38CED9F2BDA3E7F002C7B25 /* Controllers */,
+				A38CED9E2BDA3E73002C7B25 /* Scenes */,
+				A38CED442BDA3DFC002C7B25 /* Fonts */,
+				A38CED252BDA3DFC002C7B25 /* Sound */,
 				A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */,
 				A38CECF02BDA3D2E002C7B25 /* GameScene.sks */,
 				A38CECF22BDA3D2E002C7B25 /* Actions.sks */,
-				A38CECF42BDA3D2E002C7B25 /* GameScene.swift */,
-				A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */,
 				A38CECF82BDA3D2E002C7B25 /* Main.storyboard */,
-				A38CECFB2BDA3D2F002C7B25 /* Assets.xcassets */,
 				A38CECFD2BDA3D2F002C7B25 /* LaunchScreen.storyboard */,
+				A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */,
 			);
 			path = FrogJump;
 			sourceTree = "<group>";
@@ -129,6 +176,58 @@
 				A38CED142BDA3D2F002C7B25 /* FrogJumpUITestsLaunchTests.swift */,
 			);
 			path = FrogJumpUITests;
+			sourceTree = "<group>";
+		};
+		A38CED252BDA3DFC002C7B25 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */,
+				A38CED222BDA3DFC002C7B25 /* coin.mp3 */,
+				A38CED232BDA3DFC002C7B25 /* collision.wav */,
+				A38CED242BDA3DFC002C7B25 /* jump.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		A38CED442BDA3DFC002C7B25 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A38CED432BDA3DFC002C7B25 /* Krungthep.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A38CED9E2BDA3E73002C7B25 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A38CECF42BDA3D2E002C7B25 /* GameScene.swift */,
+				A31520682BDE1C510042EF8F /* GameSceneExt.swift */,
+				A315206A2BDE1CE00042EF8F /* GameSceneContactDelegate.swift */,
+				A315206E2BDE523F0042EF8F /* MainMenu.swift */,
+				A31520702BDE56AC0042EF8F /* MainMenuExt.swift */,
+				A31520722BDE58CE0042EF8F /* GameOver.swift */,
+				A31520742BDE9B5C0042EF8F /* GameOverExt.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A38CED9F2BDA3E7F002C7B25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A38CECF62BDA3D2E002C7B25 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A3B1159B2BDB6CF4004AB29B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1159C2BDB6D0E004AB29B /* CGPoint+Ext.swift */,
+				A3B1159E2BDB789B004AB29B /* CGFloat+Ext.swift */,
+				A31520762BDEA5380042EF8F /* SKTAudio.swift */,
+				A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +336,12 @@
 			files = (
 				A38CECF12BDA3D2E002C7B25 /* GameScene.sks in Resources */,
 				A38CECFA2BDA3D2E002C7B25 /* Base in Resources */,
-				A38CECFC2BDA3D2F002C7B25 /* Assets.xcassets in Resources */,
+				A38CED462BDA3DFC002C7B25 /* coin.mp3 in Resources */,
+				A38CED452BDA3DFC002C7B25 /* backgroundMusic.mp3 in Resources */,
+				A31D7BDD2BDF911300CEFED6 /* Assets.xcassets in Resources */,
+				A38CED652BDA3DFC002C7B25 /* Krungthep.ttf in Resources */,
+				A38CED472BDA3DFC002C7B25 /* collision.wav in Resources */,
+				A38CED482BDA3DFC002C7B25 /* jump.wav in Resources */,
 				A38CECF32BDA3D2E002C7B25 /* Actions.sks in Resources */,
 				A38CECFF2BDA3D2F002C7B25 /* Base in Resources */,
 			);
@@ -264,8 +368,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A315206B2BDE1CE00042EF8F /* GameSceneContactDelegate.swift in Sources */,
+				A315207B2BDEA8D50042EF8F /* SKAction+Ext.swift in Sources */,
+				A31520752BDE9B5C0042EF8F /* GameOverExt.swift in Sources */,
+				A3B1159D2BDB6D0E004AB29B /* CGPoint+Ext.swift in Sources */,
 				A38CECF52BDA3D2E002C7B25 /* GameScene.swift in Sources */,
+				A31520732BDE58CE0042EF8F /* GameOver.swift in Sources */,
 				A38CECF72BDA3D2E002C7B25 /* GameViewController.swift in Sources */,
+				A31520712BDE56AC0042EF8F /* MainMenuExt.swift in Sources */,
+				A315206D2BDE4E000042EF8F /* ScoreGenerator.swift in Sources */,
+				A315206F2BDE523F0042EF8F /* MainMenu.swift in Sources */,
+				A31520692BDE1C510042EF8F /* GameSceneExt.swift in Sources */,
+				A31520672BDE11DD0042EF8F /* Types.swift in Sources */,
+				A31520772BDEA5380042EF8F /* SKTAudio.swift in Sources */,
+				A3B1159F2BDB789B004AB29B /* CGFloat+Ext.swift in Sources */,
 				A38CECEF2BDA3D2E002C7B25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,9 +569,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,9 +597,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
