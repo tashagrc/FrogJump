@@ -7,8 +7,8 @@
 
 import Foundation
 
-class ScoreGenerator {
-    static let sharedInstance = ScoreGenerator()
+class CaloriesGenerator {
+    static let sharedInstance = CaloriesGenerator()
     private init() {
         
     }
@@ -17,18 +17,18 @@ class ScoreGenerator {
     static let keyScore = "keyScore"
     
     func setScore(_ score: Int) {
-        UserDefaults.standard.set(score, forKey: ScoreGenerator.keyScore)
+        UserDefaults.standard.set(score, forKey: CaloriesGenerator.keyScore)
     }
     
     func getScore() -> Int {
-        return UserDefaults.standard.integer(forKey: ScoreGenerator.keyScore)
+        return UserDefaults.standard.integer(forKey: CaloriesGenerator.keyScore)
     }
     
     func setHighscore(_ score: Int) {
-        UserDefaults.standard.set(score, forKey: ScoreGenerator.keyHighscore)
+        UserDefaults.standard.set(score, forKey: CaloriesGenerator.keyHighscore)
     }
     
     func getHighscore() -> Int {
-        return UserDefaults.standard.integer(forKey: ScoreGenerator.keyHighscore)
+        return UserDefaults.standard.integer(forKey: CaloriesGenerator.keyHighscore)
     }
 }
