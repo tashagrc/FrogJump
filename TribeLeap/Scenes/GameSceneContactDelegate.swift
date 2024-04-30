@@ -28,21 +28,21 @@ extension GameScene: SKPhysicsContactDelegate {
             // kalo nambrak koin maka koin akan ilang
             if let node = other.node {
                 node.removeFromParent()
-                numScore += 1
+//                numScore += 1
                 // tampilin teks ke layar
-                scoreLbl.text = "\(numScore)"
+//                scoreLbl.text = "\(numScore)"
                 // setiap kelipatan 5 bakal nambah kecepatan
-                if numScore % 5 == 0 {
-                    cameraMovePointPerSecond += 50.0
-                }
+//                if numScore % 5 == 0 {
+//                    cameraMovePointPerSecond += 50.0
+//                }
                 
                 // set highscrore
                 
-                let highscore = ScoreGenerator.sharedInstance.getHighscore()
-                if numScore > highscore {
-                    ScoreGenerator.sharedInstance.setHighscore(numScore)
-                    ScoreGenerator.sharedInstance.setScore(highscore)
-                }
+//                let highscore = ScoreGenerator.sharedInstance.getHighscore()
+//                if numScore > highscore {
+//                    ScoreGenerator.sharedInstance.setHighscore(numScore)
+//                    ScoreGenerator.sharedInstance.setScore(highscore)
+//                }
                 
                 run(soundCoin)
             }

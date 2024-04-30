@@ -53,16 +53,28 @@ extension GameOver {
     }
     
     func createNode() {
-        let gameOver = SKSpriteNode(imageNamed: "gameOver")
-        gameOver.zPosition = 10.0
-        gameOver.position = CGPoint(x: size.width/2.0, y: size.height/2.0 + gameOver.frame.height/2.0)
-        addChild(gameOver)
+        // ganti sama calories
+        let calories = SKSpriteNode(imageNamed: "calories")
+        calories.zPosition = 10.0
+        calories.position = CGPoint(x: size.width/2.0 - 150.0, y: size.height/2.0 + calories.frame.height/2.0)
+        addChild(calories)
         
         let scaleUp = SKAction.scale(to: 1.1, duration: 0.5)
         let scaleDown = SKAction.scale(to: 1.0, duration: 0.5)
         
         let fullScale = SKAction.sequence([scaleUp, scaleDown])
-        gameOver.run(.repeatForever(fullScale))
+        calories.run(.repeatForever(fullScale))
+        
+        var caloriesLbl = SKLabelNode(fontNamed: "Krungthep")
+        caloriesLbl.text = String(format: "%.2f", CaloriesGenerator.sharedInstance.getScore())
+
+        caloriesLbl.fontSize = 120.0
+        caloriesLbl.zPosition = 10.0
+        caloriesLbl.position = CGPoint(x: size.width/2.0 + 200.0, y: size.height/2.0 + caloriesLbl.frame.height/2.0)
+        addChild(caloriesLbl)
+        
+        calories.run(.repeatForever(fullScale))
+        
     }
 }
 

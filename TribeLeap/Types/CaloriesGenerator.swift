@@ -16,19 +16,19 @@ class CaloriesGenerator {
     static let keyHighscore = "keyHighscore"
     static let keyScore = "keyScore"
     
-    func setScore(_ score: Int) {
+    func setScore(_ score: Double) {
         UserDefaults.standard.set(score, forKey: CaloriesGenerator.keyScore)
     }
     
-    func getScore() -> Int {
-        return UserDefaults.standard.integer(forKey: CaloriesGenerator.keyScore)
+    func getScore() -> Double {
+        return Double(UserDefaults.standard.double(forKey: CaloriesGenerator.keyScore))
     }
     
-    func setHighscore(_ score: Int) {
+    func setHighscore(_ score: Double) {
         UserDefaults.standard.set(score, forKey: CaloriesGenerator.keyHighscore)
     }
     
-    func getHighscore() -> Int {
-        return UserDefaults.standard.integer(forKey: CaloriesGenerator.keyHighscore)
+    func getHighscore() -> Double {
+        return Double(UserDefaults.standard.double(forKey: CaloriesGenerator.keyHighscore))
     }
 }

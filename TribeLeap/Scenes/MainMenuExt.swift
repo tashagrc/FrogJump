@@ -71,7 +71,7 @@ extension MainMenu {
         // highscore
         let x = -panel.frame.width/2.0 + 250.0
         let highscoreLbl = SKLabelNode(fontNamed: "Krungthep")
-        highscoreLbl.text = "Highscore: \(ScoreGenerator.sharedInstance.getHighscore())"
+        highscoreLbl.text = "Highscore: \(CaloriesGenerator.sharedInstance.getHighscore())"
         highscoreLbl.horizontalAlignmentMode = .left
         highscoreLbl.fontSize = 80.0
         highscoreLbl.zPosition = 25.0
@@ -80,7 +80,7 @@ extension MainMenu {
         
         // score
         let scoreLbl = SKLabelNode(fontNamed: "Krungthep")
-        scoreLbl.text = "Score: \(ScoreGenerator.sharedInstance.getScore())"
+        scoreLbl.text = "Score: \(CaloriesGenerator.sharedInstance.getScore())"
         scoreLbl.horizontalAlignmentMode = .left
         scoreLbl.fontSize = 80.0
         scoreLbl.zPosition = 25.0

@@ -14,14 +14,13 @@ extension GameScene {
     func setupNodes() {
         createBG()
         createGround()
-        setupObstacles()
         spawnObstacles()
         createPlayer()
         setupCoin()
         spawnCoin()
         setupPhysics()
         setupLife()
-        setupScore()
+//        setupScore()
         setupPause()
         setupControl()
         setupCamera()
@@ -64,6 +63,7 @@ extension GameScene {
             ground.physicsBody!.isDynamic = false
             // ga terpengaruh gravity, biasa dipake di static object
             ground.physicsBody!.affectedByGravity = false
+            
             // pembeda dgn object lain
             ground.physicsBody!.categoryBitMask = PhysicsCategory.Ground
             
@@ -185,7 +185,7 @@ extension GameScene {
         
         // ini posisi obstacle yg melayang
         if sprite.name == "ObstacleFloat" {
-            sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0 + 150.0)
+            sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0 + 200.0)
         } // ini posisi obstacle yg di tanah
         else {
             sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0)
@@ -220,11 +220,13 @@ extension GameScene {
     func spawnObstacles() {
         
         let random = Double(CGFloat.random(min: 2, max: isTime))
-        run(.repeatForever(.sequence([
+        let spawn = SKAction.repeatForever(.sequence([
             .wait(forDuration: random),
             .run { [weak self] in
                 self?.setupObstacles()
-            }])))
+            }]))
+        run(.sequence([.wait(forDuration: 5), spawn]))
+        
         
         // makin lama main, makin cepat geraknya
         run(.repeatForever(.sequence([
@@ -312,24 +314,24 @@ extension GameScene {
     }
     
     // score graphic
-    func setupScore() {
-        // icon
-        coinIcon = SKSpriteNode(imageNamed: "Apple-1")
-        // ukuran coinnya
-        coinIcon.setScale(0.5)
-        coinIcon.zPosition = 50.0
-        coinIcon.position = CGPoint(x: -playableRect.width/2.0 + coinIcon.frame.width, y: playableRect.height/2.0 - lifeNodes[0].frame.height - coinIcon.frame.height/2.0)
-        cameraNode.addChild(coinIcon)
-        
-        // add score label
-        scoreLbl.text = "\(numScore)"
-        scoreLbl.fontSize = 60.0
-        scoreLbl.horizontalAlignmentMode = .left
-        scoreLbl.verticalAlignmentMode = .top
-        scoreLbl.zPosition = 50.0
-        scoreLbl.position = CGPoint(x: -playableRect.width/2.0 + coinIcon.frame.width*2.0 - 10.0, y: coinIcon.position.y + coinIcon.frame.height/2.0 - 8.0)
-        cameraNode.addChild(scoreLbl)
-    }
+//    func setupScore() {
+//        // icon
+//        coinIcon = SKSpriteNode(imageNamed: "Apple-1")
+//        // ukuran coinnya
+//        coinIcon.setScale(0.5)
+//        coinIcon.zPosition = 50.0
+//        coinIcon.position = CGPoint(x: -playableRect.width/2.0 + coinIcon.frame.width, y: playableRect.height/2.0 - lifeNodes[0].frame.height - coinIcon.frame.height/2.0)
+//        cameraNode.addChild(coinIcon)
+//        
+//         add score label
+//        scoreLbl.text = "\(numScore)"
+//        scoreLbl.fontSize = 60.0
+//        scoreLbl.horizontalAlignmentMode = .left
+//        scoreLbl.verticalAlignmentMode = .top
+//        scoreLbl.zPosition = 50.0
+//        scoreLbl.position = CGPoint(x: -playableRect.width/2.0 + coinIcon.frame.width*2.0 - 10.0, y: coinIcon.position.y + coinIcon.frame.height/2.0 - 8.0)
+//        cameraNode.addChild(scoreLbl)
+//    }
     
     // pause feature
     func setupPause() {
@@ -391,8 +393,8 @@ extension GameScene {
             lifeNodes.forEach( {
                 $0.texture = SKTexture(imageNamed: "life-off")
             })
-            numScore = 0
-            scoreLbl.text = "\(numScore)"
+//            numScore = 0
+//            scoreLbl.text = "\(numScore)"
             gameOver = true
         }
     }

@@ -10,7 +10,7 @@
 		A31520672BDE11DD0042EF8F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520662BDE11DD0042EF8F /* Types.swift */; };
 		A31520692BDE1C510042EF8F /* GameSceneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520682BDE1C510042EF8F /* GameSceneExt.swift */; };
 		A315206B2BDE1CE00042EF8F /* GameSceneContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206A2BDE1CE00042EF8F /* GameSceneContactDelegate.swift */; };
-		A315206D2BDE4E000042EF8F /* ScoreGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */; };
+		A315206D2BDE4E000042EF8F /* CaloriesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206C2BDE4E000042EF8F /* CaloriesGenerator.swift */; };
 		A315206F2BDE523F0042EF8F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315206E2BDE523F0042EF8F /* MainMenu.swift */; };
 		A31520712BDE56AC0042EF8F /* MainMenuExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520702BDE56AC0042EF8F /* MainMenuExt.swift */; };
 		A31520732BDE58CE0042EF8F /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520722BDE58CE0042EF8F /* GameOver.swift */; };
@@ -18,6 +18,7 @@
 		A31520772BDEA5380042EF8F /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31520762BDEA5380042EF8F /* SKTAudio.swift */; };
 		A315207B2BDEA8D50042EF8F /* SKAction+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */; };
 		A31D7BDD2BDF911300CEFED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */; };
+		A31FE8B42BE0A738004E2208 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A31FE8B32BE0A738004E2208 /* backgroundMusic.mp3 */; };
 		A38CECEF2BDA3D2E002C7B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */; };
 		A38CECF12BDA3D2E002C7B25 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF02BDA3D2E002C7B25 /* GameScene.sks */; };
 		A38CECF32BDA3D2E002C7B25 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A38CECF22BDA3D2E002C7B25 /* Actions.sks */; };
@@ -28,7 +29,6 @@
 		A38CED092BDA3D2F002C7B25 /* TribeLeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED082BDA3D2F002C7B25 /* TribeLeapTests.swift */; };
 		A38CED132BDA3D2F002C7B25 /* TribeLeapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED122BDA3D2F002C7B25 /* TribeLeapUITests.swift */; };
 		A38CED152BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CED142BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift */; };
-		A38CED452BDA3DFC002C7B25 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */; };
 		A38CED462BDA3DFC002C7B25 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38CED222BDA3DFC002C7B25 /* coin.mp3 */; };
 		A38CED472BDA3DFC002C7B25 /* collision.wav in Resources */ = {isa = PBXBuildFile; fileRef = A38CED232BDA3DFC002C7B25 /* collision.wav */; };
 		A38CED482BDA3DFC002C7B25 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = A38CED242BDA3DFC002C7B25 /* jump.wav */; };
@@ -58,7 +58,7 @@
 		A31520662BDE11DD0042EF8F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		A31520682BDE1C510042EF8F /* GameSceneExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneExt.swift; sourceTree = "<group>"; };
 		A315206A2BDE1CE00042EF8F /* GameSceneContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneContactDelegate.swift; sourceTree = "<group>"; };
-		A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGenerator.swift; sourceTree = "<group>"; };
+		A315206C2BDE4E000042EF8F /* CaloriesGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesGenerator.swift; sourceTree = "<group>"; };
 		A315206E2BDE523F0042EF8F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		A31520702BDE56AC0042EF8F /* MainMenuExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuExt.swift; sourceTree = "<group>"; };
 		A31520722BDE58CE0042EF8F /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
@@ -66,6 +66,7 @@
 		A31520762BDEA5380042EF8F /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		A315207A2BDEA8D50042EF8F /* SKAction+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Ext.swift"; sourceTree = "<group>"; };
 		A31D7BDC2BDF911300CEFED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/FrogJump-main/FrogJump/Assets.xcassets"; sourceTree = "<group>"; };
+		A31FE8B32BE0A738004E2208 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		A38CECEB2BDA3D2E002C7B25 /* TribeLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TribeLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CECEE2BDA3D2E002C7B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A38CECF02BDA3D2E002C7B25 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		A38CED0E2BDA3D2F002C7B25 /* TribeLeapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TribeLeapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38CED122BDA3D2F002C7B25 /* TribeLeapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TribeLeapUITests.swift; sourceTree = "<group>"; };
 		A38CED142BDA3D2F002C7B25 /* TribeLeapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TribeLeapUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		A38CED222BDA3DFC002C7B25 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
 		A38CED232BDA3DFC002C7B25 /* collision.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collision.wav; sourceTree = "<group>"; };
 		A38CED242BDA3DFC002C7B25 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A31520662BDE11DD0042EF8F /* Types.swift */,
-				A315206C2BDE4E000042EF8F /* ScoreGenerator.swift */,
+				A315206C2BDE4E000042EF8F /* CaloriesGenerator.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 		A38CED252BDA3DFC002C7B25 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				A38CED212BDA3DFC002C7B25 /* backgroundMusic.mp3 */,
+				A31FE8B32BE0A738004E2208 /* backgroundMusic.mp3 */,
 				A38CED222BDA3DFC002C7B25 /* coin.mp3 */,
 				A38CED232BDA3DFC002C7B25 /* collision.wav */,
 				A38CED242BDA3DFC002C7B25 /* jump.wav */,
@@ -337,12 +337,12 @@
 				A38CECF12BDA3D2E002C7B25 /* GameScene.sks in Resources */,
 				A38CECFA2BDA3D2E002C7B25 /* Base in Resources */,
 				A38CED462BDA3DFC002C7B25 /* coin.mp3 in Resources */,
-				A38CED452BDA3DFC002C7B25 /* backgroundMusic.mp3 in Resources */,
 				A31D7BDD2BDF911300CEFED6 /* Assets.xcassets in Resources */,
 				A38CED652BDA3DFC002C7B25 /* Krungthep.ttf in Resources */,
 				A38CED472BDA3DFC002C7B25 /* collision.wav in Resources */,
 				A38CED482BDA3DFC002C7B25 /* jump.wav in Resources */,
 				A38CECF32BDA3D2E002C7B25 /* Actions.sks in Resources */,
+				A31FE8B42BE0A738004E2208 /* backgroundMusic.mp3 in Resources */,
 				A38CECFF2BDA3D2F002C7B25 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +376,7 @@
 				A31520732BDE58CE0042EF8F /* GameOver.swift in Sources */,
 				A38CECF72BDA3D2E002C7B25 /* GameViewController.swift in Sources */,
 				A31520712BDE56AC0042EF8F /* MainMenuExt.swift in Sources */,
-				A315206D2BDE4E000042EF8F /* ScoreGenerator.swift in Sources */,
+				A315206D2BDE4E000042EF8F /* CaloriesGenerator.swift in Sources */,
 				A315206F2BDE523F0042EF8F /* MainMenu.swift in Sources */,
 				A31520692BDE1C510042EF8F /* GameSceneExt.swift in Sources */,
 				A31520672BDE11DD0042EF8F /* Types.swift in Sources */,

@@ -40,7 +40,8 @@ class GameScene: SKScene {
     var playerPosY: CGFloat = 0.0
     
     // score and life
-    var numScore: Int = 0
+    //    var numScore: Int = 0
+    var howManyMove: Int = 0
     var gameOver = false
     var life: Int = 3
     
@@ -57,7 +58,7 @@ class GameScene: SKScene {
     var soundCoin = SKAction.playSoundFileNamed("coin.mp3")
     var soundJump = SKAction.playSoundFileNamed("jump.wav")
     var soundCollision = SKAction.playSoundFileNamed("collision.wav")
-
+    
     // control jump or squat
     var jumpArrow: SKSpriteNode!
     var squatArrow: SKSpriteNode!
@@ -79,6 +80,7 @@ class GameScene: SKScene {
         let playableMargin = (size.height - playableHeight) /  2.0
         return CGRect(x: 0.0, y: playableMargin, width: size.width, height: playableHeight)
     }
+    
     // kamera nyorot ke mana aja di layar
     var cameraRect: CGRect {
         let width = playableRect.width
@@ -131,7 +133,14 @@ class GameScene: SKScene {
             if !isPaused {
                 let squatHeight = originalPlayerHeight * 0.5
                 player.size = CGSize(width: player.size.width, height: squatHeight)
+                howManyMove += 1
+                let highscore = CaloriesGenerator.sharedInstance.getHighscore()
                 
+                CaloriesGenerator.sharedInstance.setScore(Double(howManyMove) * 0.2)
+                
+                if (0.2 * Double(howManyMove)) > highscore {
+                    CaloriesGenerator.sharedInstance.setHighscore(Double(howManyMove) * 0.2)
+                }
             }
         }
         else if node.name == "jumpArrow" {
@@ -141,51 +150,65 @@ class GameScene: SKScene {
                     onGround = false
                     velocityY = -25.0
                     run(soundJump)
+                    howManyMove += 1
+                    
+                    let highscore = CaloriesGenerator.sharedInstance.getHighscore()
+                    
+                    CaloriesGenerator.sharedInstance.setScore(Double(howManyMove) * 0.2)
+                    
+                    if (0.2 * Double(howManyMove)) > highscore {
+                        CaloriesGenerator.sharedInstance.setHighscore(Double(howManyMove) * 0.2)
+                    }
                 }
             }
         }
-    
-    }
-    // memastikan tingginya jump konsisten seberapa lama jump dipencet
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        player.size.height = originalPlayerHeight
     }
     
-    // update per frame
-    override func update(_ currentTime: TimeInterval) {
-        if lastUpdateTime > 0 {
-            dt = currentTime - lastUpdateTime
-        }
-        else {
-            dt = 0
-        }
-        lastUpdateTime = currentTime
-        print(dt)
-        moveCamera()
-        movePlayer()
-        
-        velocityY += gravity
-        player.position.y -= velocityY
-        
-        // ini pastikan kalo player ga turun ke bawah ground
-        if player.position.y < playerPosY {
-            player.position.y = playerPosY
-            velocityY = 0.0
-            onGround = true
+        // memastikan tingginya jump konsisten seberapa lama jump dipencet
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesEnded(touches, with: event)
         }
         
-        // kalo gameover
-        if gameOver {
-            let scene = GameOver(size: size)
-            scene.scaleMode = scaleMode
-            view!.presentScene(scene, transition: .doorsCloseVertical(withDuration: 0.8))
+        // update per frame
+        override func update(_ currentTime: TimeInterval) {
+            if lastUpdateTime > 0 {
+                dt = currentTime - lastUpdateTime
+            }
+            else {
+                dt = 0
+            }
+            lastUpdateTime = currentTime
+            print(dt)
+            moveCamera()
+            movePlayer()
+            
+            // ini agar setelah jump balik ke tanah lagi
+            velocityY += gravity
+            player.position.y -= velocityY
+            
+            // ini pastikan kalo player ga turun ke bawah ground
+            if player.position.y < playerPosY {
+                player.position.y = playerPosY
+                velocityY = 0.0
+                onGround = true
+            }
+            
+            // setelah squat, player akan balik spt semula
+            if player.size.height < originalPlayerHeight {
+                let newSize = CGSize(width: player.size.width, height: player.size.height + (originalPlayerHeight - player.size.height) * 0.01)
+                player.size = newSize
+            }
+            
+            // kalo gameover
+            if gameOver {
+                let scene = GameOver(size: size)
+                scene.scaleMode = scaleMode
+                view!.presentScene(scene, transition: .doorsCloseVertical(withDuration: 0.8))
+            }
+            
+            
+            boundCheckPlayer()
         }
-        
-        
-        boundCheckPlayer()
     }
-}
-
-
-
+    
+    
