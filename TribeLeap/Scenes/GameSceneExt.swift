@@ -309,7 +309,7 @@ extension GameScene {
         
         node.setScale(0.5)
         node.zPosition = 50.0
-        node.position = CGPoint(x: -width/2.0 + node.frame.width*i + j - 15.0, y: height/2.0 - node.frame.height/2.0 )
+        node.position = CGPoint(x: -width/2.0 + node.frame.width*i + j - 15.0, y: height/2.0 - node.frame.height - 100.0)
         cameraNode.addChild(node)
     }
     
@@ -339,7 +339,7 @@ extension GameScene {
         pauseNode.setScale(0.5)
         pauseNode.zPosition = 50.0
         pauseNode.name = "pause"
-        pauseNode.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: playableRect.height/2.0 - pauseNode.frame.height/2.0 - 10.0)
+        pauseNode.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: playableRect.height/2.0 - pauseNode.frame.height - 50.0)
         cameraNode.addChild(pauseNode)
     }
     
@@ -378,7 +378,7 @@ extension GameScene {
         jumpArrow.zPosition = 50.0
         squatArrow.zPosition = 50.0
         
-        jumpArrow.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: -playableRect.height/2.0 + pauseNode.frame.height/2.0 + 100.0)
+        jumpArrow.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: -playableRect.height/2.0 + pauseNode.frame.height*2 + 100.0)
         squatArrow.position = CGPoint(x: playableRect.width/2.0 - pauseNode.frame.width/2.0 - 30.0, y: jumpArrow.position.y - jumpArrow.frame.height - 20.0)
         
         cameraNode.addChild(jumpArrow)
